@@ -1,0 +1,231 @@
+/* global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    font-size: 12px;
+    background: #eee;
+}
+
+nav, main, aside, .copyright {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* nav */
+header {
+    background: #fff;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.nav-logo {
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.nav-logo img {
+    max-width: 100px;
+}
+
+.nav-links:after {
+    clear: both;
+}
+
+.nav-links li {
+    float: left;
+    margin-left: 8px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #888;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+.nav .nav-links {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+}
+
+/* article */
+article {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    box-shadow: 5px 5px 5px #888;
+}
+
+article .author, .addtime {
+    font-size: 10px;
+    color: #666;
+}
+
+article a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+article ul {
+    list-style-type: none;
+}
+
+article p {
+    text-indent: 24px;
+    word-break: keep-all;
+}
+
+/* pic-list */
+.pic-list li {
+    border: 1px #eee solid;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 520px;
+}
+
+.pic-list li figcaption {
+    text-align: center;
+}
+
+.pic-list li img {
+    text-align: center;
+}
+
+/* table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px #ccc solid;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #0fa9ff;
+    font-weight: bold;
+    color: #fff;
+}
+
+tr:last-child {
+    background: #ccc;
+    font-weight: bold;
+}
+
+/* aside */
+aside {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px #888;
+}
+
+aside h1 {
+    border-left: 3px #ccc solid;
+    padding-left: 12px;
+}
+
+aside form > div {
+    margin: 20px 0;
+}
+
+aside input {
+    border: 1px #ccc solid;
+    padding: 5px;
+    text-align: left;
+}
+
+.input-title {
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.input-tip {
+    margin-left: 30%;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #999;
+    margin-top: 5px;
+}
+
+textarea {
+    padding: 3px;
+    height: 50px;
+    width: 400px;
+}
+
+aside button {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    color: #757575;
+    cursor: default;
+    text-align: center;
+    padding: 5px 16px;
+    font-weight: bold;;
+    font-size: 13px;
+}
+
+/* footer */
+footer {
+    height: 50px;
+    line-height: 50px;
+    color: #777;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    background: #fff;
+}
+
+/*
+       TODO：自定义表单
+       1. input radio
+       2. input select
+*/
+/* cutrom form */
+/* input placeholder color */
+::-webkit-input-placeholder {
+    color: #bbb;
+    font-size: 10px;
+}
+
+:-moz-placeholder {
+    color: #bbb;
+    font-size: 10px;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: #bbb;
+    font-size: 10px;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #bbb;
+    font-size: 10px;
+}
