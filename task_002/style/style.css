@@ -37,6 +37,8 @@ header {
 }
 
 .nav-links:after {
+    content: '';
+    display: block;
     clear: both;
 }
 
