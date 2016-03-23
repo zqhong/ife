@@ -1,0 +1,76 @@
+/* global */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+    font-size: 12px;
+}
+
+.logo {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+#left, #right, #middle {
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px #999 solid;
+    background: #fff;
+}
+
+.pic-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pic-list li {
+    margin-top: 20px;
+}
+
+/* container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: auto;
+    background: #eee;
+    border: 1px #999 solid;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+/* left */
+#left {
+    width: 200px;
+    float: left;
+}
+
+#left span {
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+/* right */
+#right {
+    width: 120px;
+    float: right;
+}
+
+#right:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* middle */
+#middle {
+    margin-left: 220px;
+    margin-right: 140px;
+    word-break: keep-all;
+}
+
+article {
+    text-indent: 12px;
+    word-break: keep-all;
+}
