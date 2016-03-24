@@ -12,6 +12,10 @@ nav, main, aside, .copyright {
     margin: 0 auto;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* nav */
 header {
     background: #fff;
@@ -68,7 +72,6 @@ article {
     padding: 20px;
     background: #fff;
     box-shadow: 5px 5px 5px #888;
-    box-sizing: border-box;
     margin: 20px;
     width: 65%;
 }
@@ -102,7 +105,6 @@ article p {
 
 /* pic-list */
 .pic-list li {
-    box-sizing: border-box;
     border: 1px #eee solid;
     padding: 0 10px 10px 10px;
     text-align: center;
@@ -157,7 +159,6 @@ tr:last-child {
 aside {
     background: #fff;
     padding: 20px;
-    box-sizing: border-box;
     box-shadow: 5px 5px 5px #888;
     float: right;
     width: 320px;
@@ -207,7 +208,6 @@ textarea {
     padding: 3px;
     height: 50px;
     width: 160px;
-    box-sizing: border-box;
 }
 
 aside button {
@@ -293,5 +293,40 @@ footer {
     }
     article img {
         max-width: 100px;
+    }
+    .pic-list li {
+        max-width: 100px;
+    }
+    .pic-list li img {
+        max-width: 40px;
+    }
+}
+@media screen and (max-width: 550px) {
+    article {
+        width: 30%;
+    }
+    article img {
+        max-width: 50px;
+    }
+}
+@media screen and (max-width: 510px) {
+    article {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 480px) {
+    article {
+        width: 20%;
+    }
+    article img {
+        max-width: 25px;
+    }
+}
+@media screen and (max-width: 450px) {
+    article {
+        width: 15%;
+    }
+    article img {
+        max-width: 1px;
     }
 }
