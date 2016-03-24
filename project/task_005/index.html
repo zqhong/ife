@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>任务五：零基础HTML及CSS编码（二）</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .content:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <div class="nav-logo"><a href=""><img src="img/logo.png" alt="google-logo"></a></div>
+        <ul class="nav-links">
+            <li><a href="">搜索</a></li>
+            <li><a href="">地图</a></li>
+            <li><a href="">YouTube</a></li>
+            <li><a href="">Play</a></li>
+            <li><a href="">云端硬盘</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <aside>
+        <h1>这里以后是一个侧栏，这是侧栏的标题</h1>
+
+        <form action="" method="post">
+            <div>
+                <div class="input-title"><label for="email">请输入邮箱地址</label></div>
+                <input type="email" id="email" name="email" placeholder="这是一个文本输入框">
+
+                <div class="input-tip">邮箱地址请按照要求格式输入</div>
+            </div>
+            <div>
+                <div class="input-title"><label for="password">请输入密码</label>
+                </div>
+                <input type="password" name="password" id="password" pattern="[0-9a-zA-Z]{6,16}"
+                       placeholder="这是一个文本输入框">
+            </div>
+            <div>
+                <div class="input-title"><label for="confirm_password">请重复输入密码</label>
+                </div>
+                <input type="password" name="confirm_password" id="confirm_password"
+                       pattern="[0-9a-zA-Z]{6,16}" placeholder="这是一个文本输入框">
+
+                <div class="input-tip">密码请为6-16为英文数字</div>
+            </div>
+            <div>
+                <div class="input-title">性别</div>
+                <input type="radio" name="gender" id="male" value="male" checked>
+                <label for="male">男</label>
+                <input type="radio" name="gender" id="fmale" value="female">
+                <label for="fmale">女</label>
+            </div>
+            <div>
+                <div class="input-title"><label for="city">城市</label>
+                </div>
+                <select name="city" id="city">
+                    <option value="beijing">北京</option>
+                    <option value="shenzhen">深圳</option>
+                    <option value="guangzhou">广州</option>
+                </select>
+            </div>
+            <div>
+                <div class="input-title">爱好</div>
+                <input type="checkbox" name="hobby[]" id="sport" value="sport">
+                <label for="sport">运动</label>
+                <input type="checkbox" name="hobby[]" id="art" value="art">
+                <label for="art">艺术</label>
+                <input type="checkbox" name="hobby[]" id="science" value="science">
+                <label for="science">科学</label>
+            </div>
+            <div>
+                <div class="input-title"><label for="description">个人描述</label>
+                </div>
+                <textarea name="description" id="description" cols="15" rows="3"
+                          placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+            </div>
+            <div>
+                <button type="submit">确认提交</button>
+            </div>
+        </form>
+    </aside>
+        <article>
+            <h1>文章一级标题</h1>
+
+            <h2>文章二级标题</h2>
+
+            <p>
+                <span class="author">文章作者</span>
+                <time class="addtime" datetime="2016-03-21">文章发表时间</time>
+            </p>
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                <br>换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                <br>换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>
+                这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。
+            </p>
+            <figure>
+                <img src="img/golang.jpg" alt="image">
+            </figure>
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，<br>换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br>
+                这是一个很长很长的段落，这是一个很长很长的段落，
+                <a href="http://ife.baidu.com" target="_blank">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>
+                这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落。
+            </p>
+        </article>
+        <article>
+            <h1>另一篇文章一级标题</h1>
+
+            <h2>文章二级标题</h2>
+
+            <p>
+                <span class="author">文章作者</span>
+                <time class="addtime" datetime="2016-03-21">文章发表时间</time>
+            </p>
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，<br>换行了</p>
+
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了
+            </p>
+
+            <p>
+                这是一个很长很长的段落，这是一个很长很长的段落，
+                <a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>
+                这是一个很长很长的段落，这是一个很长很长的段落，<strong>这里有个粗体字</strong>
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，
+                这是一个很长很长的段落。
+            </p>
+            <figure>
+                <img src="img/golang.jpg" alt="image">
+            </figure>
+            <ul>
+                <li>列表项目一</li>
+                <li>列表项目二</li>
+                <li>列表项目三</li>
+            </ul>
+        </article>
+        <article>
+            <h1>图片</h1>
+            <ul class="pic-list">
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <figcaption>好看的图片</figcaption>
+                        <img src="img/golang.jpg" alt="image">
+                    </figure>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h1>最后一篇文章一级标题</h1>
+
+            <h2>文章二级标题</h2>
+
+            <p><span class="author">文章作者</span>
+                <time class="addtime" datetime="2016-03-21">文章发表时间</time>
+            </p>
+            <ol>
+                <li>排名1</li>
+                <li>排名2</li>
+                <li>排名3</li>
+            </ol>
+            <p>下面是一个表格，给表格加了一个border="1"好让你看出是一个表格</p>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>表头</th>
+                    <th>表头</th>
+                    <th>表头</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>表内容单元格</td>
+                    <td>表内容单元格</td>
+                    <td><a href="#">操作</a></td>
+                </tr>
+                <tr>
+                    <td>总计</td>
+                    <td colspan="2">1000</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+
+</main>
+<footer>
+    <div class="copyright">
+        <span>版权所有 &copy; 2016 by the team 302</span>
+    </div>
+</footer>
+</body>
+</html>
