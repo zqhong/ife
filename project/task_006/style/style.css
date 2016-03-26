@@ -156,10 +156,11 @@ header .logo {
     width: 203px;
     float: right;
     border-top: 2px #cc8091 solid;
+    font-family: "Microsoft Yahei";
 }
 
 .top-right h1 {
-    font: 23px "Microsoft Yahei";
+    font-size: 23px;
     text-decoration: underline;
     color: #000;
     line-height: 40px;
@@ -302,8 +303,8 @@ header .logo {
     width: 459px;
     height: 318px;
     position: relative;
-    padding: 20px;
     box-sizing: border-box;
+    padding: 20px 0;
 }
 
 .buttom-right .content p {
@@ -311,7 +312,8 @@ header .logo {
     text-align: left;
     padding-left: 15px;
     line-height: 20px;
-    background: url("img/icon.png") no-repeat 0 50%;
+    background: url("../img/icon.png") no-repeat 0 50%;
+    margin-left: 20px;
 }
 
 .buttom-right .content p span {
@@ -349,39 +351,56 @@ header .logo {
     background: #D35B5E;
     width: 260px;
     height: 160px;
+    margin-top: 26px;
 }
 
 .quote {
     position: absolute;
     bottom: 0px;
-    right: -25px;
+    right: 0px;
     width: 199px;
     height: 160px;
+    margin: 0;
+    padding: 0;
 
-    font: 14px "ºÚÌå";
+    font: 14px "SimHei";
     color: #5a5b5b;
     font-style: italic;
     line-height: 16px;
     box-sizing: border-box;
-    padding: 20px;
-    text-indent: 30px;
+}
+
+.buttom-right .content .quote p {
+    padding: 0;
+    margin: 0;
+    font: 14px "SimHei";
+    font-style: italic;
+    line-height: 16px;
+    color: #5a5b5b;
+
+    padding: 20px 10px;
+    box-sizing: border-box;
+    text-indent: 50px;
+    background: none;
 }
 
 .big-quote {
-    font: 72px "ºÚÌå";
+    font: 72px "SimHei";
     color: #d45d5c;
+    width: 72px;
+    height: 72px;
 }
 
 .quote-1 {
     position: absolute;
-    left: -50px;
+    left: 0;
     top: 0;
 }
 
 .quote-2 {
     position: absolute;
-    right: -17px;
-    bottom: -50px;
+    right: 0;
+    bottom: 0;
 }
 
 .buttom-right .content .red-div p {
@@ -422,7 +441,7 @@ header .logo {
     font-weight: bold;
     margin: 0;
     padding: 0;
-    font-family: "ºÚÌå";
+    font-family: "SimHei";
     position: relative;
     top: 30px;
     left: 15px;
