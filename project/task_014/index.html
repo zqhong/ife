@@ -39,25 +39,13 @@
 
         // 遍历 result 数组，将结果保存到 aqi_list.innerHTML 中
         var aqi_list = document.getElementById("aqi-list");
-        var map = {
-            1: "一",
-            2: "二",
-            3: "三",
-            4: "四",
-            5: "五",
-            6: "六",
-            7: "七",
-            8: "八",
-            9: "九",
-            10: "十",
-        };
-        var map_len = Object.keys(map).length;
+        var map = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
         innerData = "";
         for (i=0; i<result.length; i++) {
-            if (i+1 > map_len) {
-                innerData += "<li>第" + (i+1) + "名：" + result[i][0] + "，" + result[i][1] + "</li>";
+            if (i < map.length) {
+                innerData += "<li>第" + map[i] + "名：" + result[i][0] + "，" + result[i][1] + "</li>";
             } else {
-                innerData += "<li>第" + map[i+1] + "名：" + result[i][0] + "，" + result[i][1] + "</li>";
+                innerData += "<li>第" + (i+1) + "名：" + result[i][0] + "，" + result[i][1] + "</li>";
             }
         }
         aqi_list.innerHTML = innerData;
