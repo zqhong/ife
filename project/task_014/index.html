@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>任务十四：零基础JavaScript编码（二）</title>
+</head>
+<body>
+
+<h3>污染城市列表</h3>
+<ul id="aqi-list">
+    <!--
+    <li>第一名：福州（样例），10</li>
+  	<li>第二名：福州（样例），10</li>
+  	 -->
+</ul>
+
+<script type="text/javascript">
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    (function () {
+        var aqi_list = document.getElementById("aqi-list");
+
+        // 过滤掉 item[1] 小于等于 60的结果
+        var result = aqiData.filter(function(item) {
+            return item[1] > 60;
+        })
+
+        // 对结果进行排序
+        result.sort(function(a, b) {
+            return b[1] - a[1];
+        });
+
+        // 遍历 result 数组，将结果保存到 aqi_list.innerHTML 中
+        var aqi_list = document.getElementById("aqi-list");
+        var map = {
+            1: "一",
+            2: "二",
+            3: "三",
+            4: "四",
+            5: "五",
+            6: "六",
+            7: "七",
+            8: "八",
+            9: "九",
+            10: "十",
+        };
+        var map_len = Object.keys(map).length;
+        innerData = "";
+        for (i=0; i<result.length; i++) {
+            if (i+1 > map_len) {
+                innerData += "<li>第" + (i+1) + "名：" + result[i][0] + "，" + result[i][1] + "</li>";
+            } else {
+                innerData += "<li>第" + map[i+1] + "名：" + result[i][0] + "，" + result[i][1] + "</li>";
+            }
+        }
+        aqi_list.innerHTML = innerData;
+    })();
+
+</script>
+</body>
+</html>
