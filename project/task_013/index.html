@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>任务十三：零基础JavaScript编码（一）</title>
+</head>
+<body>
+<label for="aqi-input">
+    请输入北京今天的空气质量：
+    <input type="text" id="aqi-input">
+</label>
+<button id="button">确认填写</button>
+
+<div>
+    您输入的值为：
+    <span id="aqi-display">尚未录入</span>
+</div>
+<script type="text/javascript">
+    (function() {
+        // 通过 document.getElementById 方法获取dom元素
+        var val = document.getElementById("aqi-input");
+        var btn = document.getElementById("button");
+        var inner = document.getElementById("aqi-display");
+
+        // 为 btn 添加 onclick 事件
+        btn.onclick = function() {
+            var value = val.value.trim();
+            if (value.length == 0) {
+                inner.innerHTML = "请录入有效数据！1";
+            } else {
+                inner.innerHTML = value;
+            }
+        }
+    })();
+</script>
+</body>
+</html>
