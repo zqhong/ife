@@ -1,0 +1,46 @@
+.default, body, header, main { margin: 0; padding: 0; }
+
+.a, header .right a { color: #fff; text-decoration: none; }
+
+body { font-size: 12px; min-width: 1000px; background: #fff; font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Microsoft Yahei", sans-serif; }
+
+header, main { width: 100%; }
+header:before, header:after, main:before, main:after { content: ""; display: table; }
+header:after, main:after { clear: both; }
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+header { background: #2189BF; height: 50px; }
+header .left { margin-left: 8.33333%; margin-top: calc((50px - 36px)/2); }
+header .right { margin-right: 8.33333%; margin-top: calc((50px - 25px)/2); }
+header .right form { display: inline-block; }
+header .right #search_input { width: 300px; height: 25px; display: inline-block; border: none; -webkit-border-radius: 15px; border-radius: 15px; background-clip: padding-box; background: #fff url("../img/search-icon.png") no-repeat 5% 50%; }
+header .right #search_submit { display: none; }
+header .right a { background: url("../img/user.png") no-repeat left center; margin-left: 10px; padding-left: 20px; }
+
+.avatar-img { overflow: hidden; position: relative; }
+
+.avatar-img img { width: 100px; height: 100px; border-radius: 50%; padding: 5px; border: 2px #fff solid; position: relative; }
+
+.avatar-img span { color: #fff; font-size: 16px; position: absolute; top: 50%; padding-left: 5%; }
+
+.file-open { background: url("../img/file_open.png") no-repeat left center; padding-left: 16px; }
+
+.arrow-right { background: url("../img/arrow_right.png") no-repeat left center; padding-left: 16px; }
+
+.arrow-bottom, main .left .menu-list .level-2 .selected { background: url("../img/arrow_bottom.png") no-repeat left center; padding-left: 16px; }
+
+main .left { width: 20%; height: 700px; font-size: 14px; color: #6C8094; background: #2B2E3C; padding: 3% 0 0 3%; }
+main .left .profile:before, main .left .profile:after { content: ""; display: table; }
+main .left .profile:after { clear: both; }
+main .left .profile .left { text-align: center; height: 50px; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; margin-top: 20px; padding: 0; }
+main .left .profile .left p { margin: 0; border-right: 1px #323545 solid; }
+main .left .profile .left:last-of-type p { border: none; }
+main .left .menu-list .selected { color: #fff; }
+main .right { width: 80%; height: 700px; background: #EDEDED; }
+
+/*# sourceMappingURL=index.css.map */
