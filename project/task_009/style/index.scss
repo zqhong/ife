@@ -27,13 +27,20 @@
   padding-left: 16px;
 }
 
+$headerBackground: #2189BF;
+$headerHeight: 50px;
+$headerMargin: 1/12*100%;
+$logoHeight: 36px;
+$searchInputHeight: 25px;
+$aColor: #6998BF;
+
 .default {
   margin: 0;
   padding: 0;
 }
 
 .a {
-  color: #fff;
+  color: $aColor;
   text-decoration: none;
 }
 
@@ -55,6 +62,11 @@ header, main {
   @include box-sizing(border-box);
 }
 
+a {
+  text-decoration: none;
+  color: #77A0C4;
+}
+
 .left {
   float: left;
 }
@@ -63,11 +75,7 @@ header, main {
   float: right;
 }
 
-$headerBackground: #2189BF;
-$headerHeight: 50px;
-$headerMargin: 1/12*100%;
-$logoHeight: 36px;
-$searchInputHeight: 25px;
+
 
 // header
 header {
@@ -90,14 +98,14 @@ header {
       display: inline-block;
       border: none;
       @include border-radius(15px);
-      background: #fff url("../img/search-icon.png") no-repeat 5% 50%;
+      background: #fff url("../img/search.jpg") no-repeat 5% 50%;
     }
     #search_submit {
       display: none;
     }
     a {
       @extend .a;
-      background: url("../img/user.png") no-repeat left center;
+      background: url("../img/login.png") no-repeat left center;
       margin-left: 10px;
       padding-left: 20px;
     }
@@ -108,9 +116,11 @@ header {
 // avatar
 $avatarWidth: 100px;
 $avatarHeight: 100px;
+$allLeftPadding: 5% 0 1% 8%;
 .avatar-img {
   overflow: hidden;
   position: relative;
+  padding: $allLeftPadding;
 }
 .avatar-img img {
   width: $avatarWidth;
@@ -130,13 +140,25 @@ $avatarHeight: 100px;
 
 // menu-list
 .file-open {
-  @include span-icon("../img/file_open.png");
+  @include span-icon("../img/icon-file-open.png");
+}
+.package-open {
+  @include span-icon("../img/icon-package-open.png")
 }
 .arrow-right {
-  @include span-icon("../img/arrow_right.png");
+  @include span-icon("../img/icon-right.png");
 }
 .arrow-bottom {
-  @include span-icon("../img/arrow_bottom.png");
+  @include span-icon("../img/icon-down.png");
+}
+.start-icon {
+  @include span-icon("../img/icon-star.png");
+}
+.share-icon {
+  @include span-icon("../img/share.png");
+}
+.user-info-icon {
+  @include span-icon("../img/user_info.png");
 }
 
 $mainLeftWidth: 20%;
@@ -144,21 +166,23 @@ $mainLeftBackground: #2B2E3C;
 $mainLeftLightBackground: #383E4D;
 $mainRightWidth: 100%-$mainLeftWidth;
 $mainRightBackground: #EDEDED;
-$mainLeftPadding: 3%;
+$mainLeftPadding: 20px;
 $mainLeftFontSize: 14px;
 $menuSelectedColor: #fff;
 main {
   $leftFontColor: #6C8094;
   $leftFontLightColor: #fff;
+  $levelMarginBottom: 10px;
+  $level2Padding: 12px;
+  $level3Padding: $level2Padding*2;
   .left {
     width: $mainLeftWidth;
-    height: 700px;
     font-size: $mainLeftFontSize;
     color: $leftFontColor;
     background: $mainLeftBackground;
-    padding: $mainLeftPadding 0 0 $mainLeftPadding;
 
     .profile {
+      padding: $allLeftPadding;
       @include clearfix();
       .left {
         text-align: center;
@@ -176,20 +200,63 @@ main {
         border: none;
       }
     }
-
-    .menu-list {
-      .selected {
-        color: $menuSelectedColor;
+    .menu-item {
+      padding: $allLeftPadding;
+    }
+    .menu-item.selected {
+      background: #373D4C;
+    }
+    .level-1, .level-2, .level-3 {
+      margin-bottom: $levelMarginBottom;
+    }
+    .selected {
+      color: $menuSelectedColor;
+    }
+    .level-1 {
+      span {
+        padding-left: 20px;
       }
-      .level-2 .selected {
-        @extend .arrow-bottom;
+    }
+    .level-2, .level-3 {
+      span {
+        padding-left: 5px;
       }
+    }
+    .level-2 {
+      @extend .arrow-right;
+      @include box-sizing(border-box);
+      padding-left: $level2Padding;
+    }
+    .level-2.selected {
+      @extend .arrow-bottom;
+      padding-left: 20px;
+    }
+    .level-3 {
+      @include box-sizing(border-box);
+      padding-left: $level3Padding;
     }
   }
   .right {
     width: $mainRightWidth;
-    height: 700px;
     background: $mainRightBackground;
+    height: 700px;
+    .nav {
+      background: #fff;
+      padding: 5px 0 5px 30px;
+      span {
+        font-size: 13px;
+        color: #ccc;
+      }
+      a {
+        color: $aColor;
+      }
+    }
+    .row {
+      width: 90%;
+      background: #fff;
+      margin: 20px auto;
+      height: 150px;
+    }
   }
 }
 
